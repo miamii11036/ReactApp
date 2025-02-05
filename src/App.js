@@ -9,15 +9,16 @@ import CurrentMessage from './WeekDisplay/CurrentMessage';
 import DayProvider from './WeekDisplay/DayProvider';
 import UserProvider from './LogInOutButton/UserProvider';
 import LogMenu from './LogInOutButton/LogMenu';
+import SimpleCalculator from './SimpleCalculator/SimpleCalculator';
 
 function App() {
   return (
     <div className="App">
       <nav>
-        <Link to="/" className='nav-item'>首頁</Link><br />
+        <Link to="/Home" className='nav-item'>首頁</Link><br />
       </nav>
       <Routes>
-          <Route path='/' element={<Home />}></Route>
+          <Route path='/Home' element={<Home />}></Route>
       </Routes>
       <div>
         <Link to="/MealsLister" className='nav-item'>餐點計算器</Link>
@@ -50,9 +51,15 @@ function App() {
           }></Route>
         </Routes>
       </div>
+      <div>
+        <Link to="/SimpleCalculator" className='nav-item'>超沒用計算機</Link>
+        <Routes>
+          <Route path='/SimpleCalculator' element={<SimpleCalculator />} />
+        </Routes>
+      </div>
     </div>
-
   );
 }
 
 export default App;
+
